@@ -1,4 +1,4 @@
-import { Container, Row, Card, Col } from "react-bootstrap";
+import { Container, Row, Card, Col, Image } from "react-bootstrap";
 import { NavigationBar } from "./NavigationBar";
 import { CircularProgressbar } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
@@ -10,6 +10,7 @@ import {
 } from "../services/RecipientApiService";
 
 import { useEffect, useState } from "react";
+
 
 export function MainHome() {
   const [rawFood, setRawFood] = useState(0);
@@ -38,15 +39,18 @@ export function MainHome() {
         <h1 className="display-4 text-primary mb-4 font-weight-bold">
           CharityXchange: NGO Donation PhilanthroPortal
         </h1>
-        <p className="lead">
+        <p className="lead" >
           Our mission is to help you make a positive impact on the world by
           enabling you to easily donate to causes you care about.
         </p>
-
+       <img src="https://scontent.fbom30-1.fna.fbcdn.net/v/t1.6435-9/53039195_2371189593111403_3274218487895031808_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=e3f864&_nc_ohc=xmz1hnL3QpoAX-YIrz4&_nc_ht=scontent.fbom30-1.fna&oh=00_AfCeEQ0Zre9nS711crlbm4mDqnbS4r5YX88Ugw5pVmxv7Q&oe=643878B2"></img>
+       {/* <img src="https://www.udaipurblog.com/wp-content/uploads/2018/02/About-Us-Bal-Utsav-Bangalore-India.jpg"></img> */}
+          
+        
         <Container className="mt-4">
           <Row>
             <Col lg={4}>
-              <Card className="border-0 shadow-lg rounded-lg">
+              <Card className="border-0 shadow-lg rounded-lg " style={{ height: 755 }} >
                 <div className="p-3 bg-primary text-white">
                   <h3 className="text-center mb-0">Food Needs</h3>
                 </div>
@@ -59,7 +63,7 @@ export function MainHome() {
                       marginTop: 20,
                     }}
                   >
-                    <CircularProgressbar value={rawFood} strokeWidth={8}>
+                    <CircularProgressbar value={rawFood} strokeWidth={5}>
                       <div style={{ fontSize: 12, marginTop: -5 }}>
                         <strong className="text-info">80%</strong> Clothing
                       </div>
@@ -80,7 +84,7 @@ export function MainHome() {
             </Col>
 
             <Col lg={4}>
-              <Card className="border-0 shadow-lg rounded-lg">
+              <Card className="border-0 shadow-lg rounded-lg" style={{ height: 755 }}>
                 <div className="p-3 bg-primary text-white">
                   <h3 className="text-center mb-0">Stationary Needs</h3>
                 </div>
@@ -93,7 +97,7 @@ export function MainHome() {
                       marginTop: 20,
                     }}
                   >
-                    <CircularProgressbar value={stationary} strokeWidth={8}>
+                    <CircularProgressbar value={stationary} strokeWidth={5}>
                       <div style={{ fontSize: 12, marginTop: -5 }}>
                         <strong className="text-info">80%</strong> Stationary
                       </div>
@@ -117,7 +121,7 @@ export function MainHome() {
             </Col>
 
             <Col lg={4}>
-              <Card className="border-0 shadow-lg rounded-lg">
+              <Card className="border-0 shadow-lg rounded-lg" style={{ height: 755 }}>
                 <div className="p-3 bg-primary text-white">
                   <h3 className="text-center mb-0">Clothing Needs</h3>
                 </div>
@@ -130,7 +134,7 @@ export function MainHome() {
                       marginTop: 20,
                     }}
                   >
-                    <CircularProgressbar value={clothes} strokeWidth={8}>
+                    <CircularProgressbar value={clothes} strokeWidth={5}>
                       <div style={{ fontSize: 12, marginTop: -5 }}>
                         <strong className="text-info">80%</strong> Clothing
                       </div>

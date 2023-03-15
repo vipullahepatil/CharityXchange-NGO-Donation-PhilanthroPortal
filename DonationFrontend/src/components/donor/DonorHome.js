@@ -16,13 +16,21 @@ export function DonorHome() {
   return (
     <>
       <DonorNavigationBar></DonorNavigationBar>
-      <Container className="mt-5 mb-5" style={{ minHeight: "415px" }}>
-        <Row className="justify-content-center align-items-center">
-          <Col xs={12} md={8} lg={6} className="text-center">
-            <h1 className="mb-4 text-primary">
+      <Container className=" mb-2" style={{ minHeight: "375px" }} >
+        {/* <Row className="justify-content-center align-items-center"> */}
+        <Row >
+          
+          <Container className="d-flex justify-content-center p-2 mx-auto">
+          <h1 className="mb-4 text-primary">
               Welcome to the Donor Interface!
-            </h1>
-            <Alert variant="primary">
+          </h1>
+            
+          </Container>
+       
+          <Col lg={6} ><img width={500} src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"></img>
+          </Col>
+          <Col xs={12} md={8} lg={6} className="text-center">
+           <Alert variant="primary">
               Donate to Support Your Favorite Causes
             </Alert>
             <p className="mt-4" style={{ fontFamily: "Roboto, sans-serif" }}>

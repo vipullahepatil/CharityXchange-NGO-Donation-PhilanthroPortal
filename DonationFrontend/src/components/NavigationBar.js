@@ -1,6 +1,7 @@
 import { Component } from "react";
-import { Container, Nav, Navbar, NavDropdown } from "react-bootstrap";
+import { Container, Image, Nav, Navbar, NavDropdown } from "react-bootstrap";
 import { LinkContainer } from "react-router-bootstrap";
+import logo from "./images/whiteLogo.png";
 
 export class NavigationBar extends Component {
   render() {
@@ -8,10 +9,12 @@ export class NavigationBar extends Component {
       <Navbar bg="dark" variant="dark" expand="lg">
         <Container>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
-          <Navbar.Collapse id="basic-navbar-nav">
+          <Navbar.Collapse id="basic-navbar-nav" >
             <Nav className="me-auto">
               <LinkContainer to={"/"}>
-                <Nav.Link>CharityXchange</Nav.Link>
+                <Nav.Link>
+                  <Image src={logo} alt="CharityXchange" style={{ width: "60px", height: "60px", marginRight: "10px" }} className="d-inline-block align-top" />
+                </Nav.Link>
               </LinkContainer>
               <NavDropdown title="Register" id="basic-nav-dropdown">
                 <LinkContainer to={"/donorRegistrationForm"}>
@@ -25,28 +28,14 @@ export class NavigationBar extends Component {
                 </LinkContainer>
               </NavDropdown>
               <LinkContainer to={"/login"}>
-                <Nav.Link>Login</Nav.Link>
+                <Nav.Link style={{ fontSize: "18px" }}>Login</Nav.Link>
               </LinkContainer>
               <LinkContainer to={"/ContactUs"}>
-                <Nav.Link>Contact us</Nav.Link>
+                <Nav.Link style={{ fontSize: "18px" }}>Contact us</Nav.Link>
               </LinkContainer>
               <LinkContainer to={"/AboutUs"}>
-                <Nav.Link>About us</Nav.Link>
+                <Nav.Link style={{ fontSize: "18px" }}>About us</Nav.Link>
               </LinkContainer>
-              {/* <NavDropdown title="Login" id="basic-nav-dropdown">
-                <LinkContainer to={"/adminLogin"}>
-                  <NavDropdown.Item>as Admin</NavDropdown.Item>
-                </LinkContainer>
-                <LinkContainer to={"/donorLogin"}>
-                  <NavDropdown.Item>as Donor</NavDropdown.Item>
-                </LinkContainer>
-                <LinkContainer to={"/recipientLoginForm"}>
-                  <NavDropdown.Item>as Recipient</NavDropdown.Item>
-                </LinkContainer>
-                <LinkContainer to={"/volunteerLoginForm"}>
-                  <NavDropdown.Item>as Volunteer</NavDropdown.Item>
-                </LinkContainer>
-              </NavDropdown> */}
             </Nav>
           </Navbar.Collapse>
         </Container>

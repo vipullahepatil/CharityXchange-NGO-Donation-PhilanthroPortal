@@ -108,9 +108,9 @@ export function DonorRegistrationForm() {
     if (donorDetails.donorPhone.trim() === "") {
       setDonorPhoneError("Donor Phone number is required");
       isValid = false;
-    } else if (!/^[1-9]{1}[0-9]{9}$/.test(donorDetails.donorPhone)) {
+    } else if (!/^[6-9]{1}[0-9]{9}$/.test(donorDetails.donorPhone)) {
       setDonorPhoneError(
-        "Donor Phone number can only contain numbers and of 10 digits"
+        "Donor Phone number can only contain numbers and of 10 digits and first digit(6-9) "
       );
       isValid = false;
     } else {
@@ -140,8 +140,8 @@ export function DonorRegistrationForm() {
     if (!donorDetails.donorZipCode.trim()) {
       setDonorZipCodeError("Donor ZIP code is required");
       isValid = false;
-    } else if (!/^\d{6}$/.test(donorDetails.donorZipCode)) {
-      setDonorZipCodeError("Please enter a valid 6-digit ZIP code");
+    } else if (!/^4[0-4]\d{4}$/.test(donorDetails.donorZipCode)) {
+      setDonorZipCodeError("Please enter a valid 6-digit ZIP code and for mh first 2 digit (40-44)");
       isValid = false;
     } else {
       setDonorZipCodeError("");

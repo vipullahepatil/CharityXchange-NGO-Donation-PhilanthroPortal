@@ -85,7 +85,7 @@ const AboutUs = () => {
           </Col>
         </Row>
       </Container>
-      <Footer></Footer>
+     
     </>
   );
 };

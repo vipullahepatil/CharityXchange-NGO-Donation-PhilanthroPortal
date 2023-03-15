@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
-import { Table, Container, Card, Button } from "react-bootstrap";
+import { Table,Image, Container, Card, Button, Row, Col } from "react-bootstrap";
 import { Link, useNavigate } from "react-router-dom";
 import { getDonorFromServer } from "../../services/DonerApiService";
 import { DonorNavigationBar } from "./DonorNavigationBar";
+
 
 export function DonorProfile() {
   const [donorDetails, setDonorDetails] = useState({});
@@ -28,9 +29,14 @@ export function DonorProfile() {
   return (
     <>
       <DonorNavigationBar></DonorNavigationBar>
-      <Container className="mt-5 mb-5">
+      <Container className="mt-1 mb-2">
+      <Row className="justify-content-center">
+        <Col md={6}>
         <Card className="shadow-lg p-5">
-          <h1 className="text-center mb-5">User Profile</h1>
+          <h1 className="text-center mb-5">Donor Profile</h1>
+          <div className="d-flex justify-content-center align-items-center mb-4">
+          <Image src={"https://www.freeiconspng.com/thumbs/profile-icon-png/am-a-19-year-old-multimedia-artist-student-from-manila--21.png"} roundedCircle className="mr-3" width={100} height={100} />
+          </div>
           <Table responsive striped bordered hover>
             <tbody>
               <tr>
@@ -55,12 +61,17 @@ export function DonorProfile() {
               </tr>
             </tbody>
           </Table>
+          <div className="d-flex justify-content-center align-items-center mb-4">
           <Link to={"/donorEditProfile"}>
-            <Button className="mt-3" variant="primary">
+            <Button className="mt-3 " variant="primary">
               Edit Profile
             </Button>
           </Link>
+          </div>
+         
         </Card>
+        </Col>
+      </Row>
       </Container>
     </>
   );

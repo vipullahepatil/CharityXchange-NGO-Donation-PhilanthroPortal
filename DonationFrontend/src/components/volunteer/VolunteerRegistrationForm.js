@@ -122,8 +122,8 @@ export function VolunteerRegistrationForm() {
     if (volunteerDetails.volunteerPhone.trim() === "") {
       setVolunteerPhoneError("Volunteer Phone number is required");
       isValid = false;
-    } else if (!/^[1-9]{1}[0-9]{9}$/.test(volunteerDetails.volunteerPhone)) {
-      setVolunteerPhoneError("Volunteer Phone number can only contain numbers");
+    } else if (!/^[6-9]{1}[0-9]{9}$/.test(volunteerDetails.volunteerPhone)) {
+      setVolunteerPhoneError("Volunteer Phone number can only contain numbers and start with(6-9)");
       isValid = false;
     } else if (volunteerDetails.volunteerPhone.length !== 10) {
       setVolunteerPhoneError("Volunteer Phone number must be 10 digit");
@@ -166,8 +166,8 @@ export function VolunteerRegistrationForm() {
     if (volunteerDetails.volunteerZipCode.trim() === "") {
       setVolunteerZipCodeError("Volunteer ZIP code is required");
       isValid = false;
-    } else if (!/^[0-9]{6}$/.test(volunteerDetails.volunteerZipCode)) {
-      setVolunteerZipCodeError("Please enter a valid 6-digit ZIP code");
+    } else if (!/^4[0-4]\d{4}$/.test(volunteerDetails.volunteerZipCode)) {
+      setVolunteerZipCodeError("Please enter a valid 6-digit ZIP code and for mh first 2 digit (40-44)");
       isValid = false;
     } else {
       setVolunteerZipCodeError("");
@@ -177,7 +177,7 @@ export function VolunteerRegistrationForm() {
     if (volunteerDetails.volunteerAge.trim() === "") {
       setVolunteerAgeError("Volunteer Age is required");
       isValid = false;
-    } else if (volunteerDetails.volunteerAge < 18) {
+    } else if (volunteerDetails.volunteerAge < 18 && volunteerDetails.volunteerAge > 80) {
       setVolunteerAgeError("Age should be greater than or equal to 18");
       isValid = false;
     } else {
