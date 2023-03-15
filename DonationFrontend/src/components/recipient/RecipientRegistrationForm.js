@@ -117,7 +117,7 @@ export function RecipientRegistrationForm() {
       setReipientPhoneError("recipient Phone number is required");
       isValid = false;
     } else if (!/^[6-9]{1}[0-9]{9}$/.test(recipientDetails.recipientPhone)) {
-      setReipientPhoneError("recipient Phone number can only contain numbers");
+      setReipientPhoneError("recipient Phone number can only contain numbers and start with (6-9)");
       isValid = false;
     } else if (recipientDetails.recipientPhone.length !== 10) {
       setReipientPhoneError("recipient Phone number must be 10 digit");

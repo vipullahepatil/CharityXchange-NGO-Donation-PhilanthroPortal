@@ -33,7 +33,7 @@ export function DonorProfile() {
       <Row className="justify-content-center">
         <Col md={6}>
         <Card className="shadow-lg p-5">
-          <h1 className="text-center mb-5">Donor Profile</h1>
+          <h1 className="text-center mb-5">User Profile</h1>
           <div className="d-flex justify-content-center align-items-center mb-4">
           <Image src={"https://www.freeiconspng.com/thumbs/profile-icon-png/am-a-19-year-old-multimedia-artist-student-from-manila--21.png"} roundedCircle className="mr-3" width={100} height={100} />
           </div>

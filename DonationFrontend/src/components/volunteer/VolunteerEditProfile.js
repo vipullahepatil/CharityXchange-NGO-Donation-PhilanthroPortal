@@ -94,13 +94,13 @@ export function VolunteerEditProfile() {
 
     // volunteerPhone validation
     if (volunteerDetails.volunteerPhone.trim() === "") {
-      setVolunteerPhoneError("Phone number is required");
+      setVolunteerPhoneError("Volunteer Phone number is required");
       isValid = false;
-    } else if (!/^[0-9]+$/.test(volunteerDetails.volunteerPhone)) {
-      setVolunteerPhoneError("Phone number can only contain numbers");
+    } else if (!/^[6-9]{1}[0-9]{9}$/.test(volunteerDetails.volunteerPhone)) {
+      setVolunteerPhoneError("Volunteer Phone number can only contain numbers and start with(6-9)");
       isValid = false;
     } else if (volunteerDetails.volunteerPhone.length !== 10) {
-      setVolunteerPhoneError("Phone number must be 10 digit");
+      setVolunteerPhoneError("Volunteer Phone number must be 10 digit");
       isValid = false;
     } else {
       setVolunteerPhoneError("");
@@ -121,10 +121,10 @@ export function VolunteerEditProfile() {
 
     // Volunteer ZIP code validation
     if (volunteerDetails.volunteerZipCode.trim() === "") {
-      setVolunteerZipCodeError("ZIP code is required");
+      setVolunteerZipCodeError("Volunteer ZIP code is required");
       isValid = false;
-    } else if (!/^[0-9]{6}$/.test(volunteerDetails.volunteerZipCode)) {
-      setVolunteerZipCodeError("Please enter a valid 6-digit ZIP code");
+    } else if (!/^4[0-4]\d{4}$/.test(volunteerDetails.volunteerZipCode)) {
+      setVolunteerZipCodeError("Please enter a valid 6-digit ZIP code and for mh first 2 digit (40-44)");
       isValid = false;
     } else {
       setVolunteerZipCodeError("");
@@ -134,7 +134,7 @@ export function VolunteerEditProfile() {
     if (volunteerDetails.volunteerAge == null) {
       setVolunteerAgeError("Age is required");
       isValid = false;
-    } else if (volunteerDetails.volunteerAge < 18) {
+    } else if (volunteerDetails.volunteerAge < 18 && volunteerDetails.volunteerAge >= 80) {
       setVolunteerAgeError("Age should be greater than or equal to 18");
       isValid = false;
     } else {
