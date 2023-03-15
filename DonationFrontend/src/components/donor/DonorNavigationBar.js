@@ -1,6 +1,7 @@
 import { Component } from "react";
-import { Container, Nav, Navbar } from "react-bootstrap";
+import { Container, Image, Nav, Navbar } from "react-bootstrap";
 import { LinkContainer } from "react-router-bootstrap";
+import logo from "../images/whiteLogo.png";
 
 export class DonorNavigationBar extends Component {
   handleLogout = () => {
@@ -14,6 +15,20 @@ export class DonorNavigationBar extends Component {
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
+              <LinkContainer to={"/donorHome"}>
+                <Nav.Link>
+                  <Image
+                    src={logo}
+                    alt="CharityXchange"
+                    style={{
+                      width: "60px",
+                      height: "60px",
+                      marginRight: "10px",
+                    }}
+                    className="d-inline-block align-top"
+                  />
+                </Nav.Link>
+              </LinkContainer>
               <LinkContainer to={"/donorHome"}>
                 <Nav.Link>Home</Nav.Link>
               </LinkContainer>

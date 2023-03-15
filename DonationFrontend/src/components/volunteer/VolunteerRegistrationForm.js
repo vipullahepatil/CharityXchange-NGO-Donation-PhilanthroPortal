@@ -177,7 +177,7 @@ export function VolunteerRegistrationForm() {
     if (volunteerDetails.volunteerAge.trim() === "") {
       setVolunteerAgeError("Volunteer Age is required");
       isValid = false;
-    } else if (volunteerDetails.volunteerAge < 18 && volunteerDetails.volunteerAge > 80) {
+    } else if (volunteerDetails.volunteerAge < 18 && volunteerDetails.volunteerAge >= 80) {
       setVolunteerAgeError("Age should be greater than or equal to 18");
       isValid = false;
     } else {

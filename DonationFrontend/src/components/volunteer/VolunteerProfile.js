@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Table, Container, Card, Button } from "react-bootstrap";
+import { Table, Container, Card, Button, Row, Col, Image } from "react-bootstrap";
 import { Link, useNavigate } from "react-router-dom";
 import { getVolunteerFromServer } from "../../services/VolunteerApiService";
 import { VolunteerNavigationBar } from "./VolunteerNavigationBar";
@@ -28,10 +28,15 @@ export function VolunteerProfile() {
   return (
     <>
       <VolunteerNavigationBar></VolunteerNavigationBar>
-      <Container className="mt-3 mb-3">
+      <Container className="mt-1 mb-2">
+      <Row className="justify-content-center">
+        <Col md={6}>
         <Card className="shadow-lg p-5">
           <h1 className="text-center mb-5">User Profile</h1>
-          <Table striped bordered hover>
+          <div className="d-flex justify-content-center align-items-center mb-4">
+          <Image src={"https://www.freeiconspng.com/thumbs/profile-icon-png/am-a-19-year-old-multimedia-artist-student-from-manila--21.png"} roundedCircle className="mr-3" width={100} height={100} />
+          </div>
+          <Table responsive striped bordered hover>
             <tbody>
               <tr>
                 <th>Name</th>
@@ -59,13 +64,19 @@ export function VolunteerProfile() {
               </tr>
             </tbody>
           </Table>
+          <div className="d-flex justify-content-center align-items-center mb-4">
           <Link to={"/volunteerEditProfile"}>
             <Button className="mt-3" variant="primary">
               Edit Profile
             </Button>
-          </Link>
+            </Link>
+          </div>
+         
         </Card>
+        </Col>
+      </Row>
       </Container>
     </>
   );
 }
+

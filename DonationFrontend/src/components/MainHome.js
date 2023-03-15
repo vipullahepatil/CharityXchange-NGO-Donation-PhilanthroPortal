@@ -47,10 +47,10 @@ export function MainHome() {
        {/* <img src="https://www.udaipurblog.com/wp-content/uploads/2018/02/About-Us-Bal-Utsav-Bangalore-India.jpg"></img> */}
           
         
-        <Container className="mt-4">
+       <Container className="mt-4">
           <Row>
             <Col lg={4}>
-              <Card className="border-0 shadow-lg rounded-lg " style={{ height: 755 }} >
+              <Card className="border-0 shadow-lg rounded-lg">
                 <div className="p-3 bg-primary text-white">
                   <h3 className="text-center mb-0">Food Needs</h3>
                 </div>
@@ -63,28 +63,36 @@ export function MainHome() {
                       marginTop: 20,
                     }}
                   >
-                    <CircularProgressbar value={rawFood} strokeWidth={5}>
+                    <CircularProgressbar value={rawFood} strokeWidth={8}>
                       <div style={{ fontSize: 12, marginTop: -5 }}>
                         <strong className="text-info">80%</strong> Clothing
                       </div>
                     </CircularProgressbar>
-                    <div style={{ marginTop: 10, fontSize: 16 }}>
+                    <div
+                      style={{
+                        marginTop: 10,
+                        fontSize: 24,
+                        fontWeight: "bold",
+                        color: "blue",
+                      }}
+                    >
                       {rawFood}% of food needs met
                     </div>
                   </div>
                   <Card.Text className="mt-4">
-                    Did you know that more than 194 million people in India are
-                    undernourished and struggle to have access to nutritious
-                    food? Your donation can make a difference in their lives.
-                    You can help us in our mission to end hunger and food
-                    insecurity in India.
+                    Are you ware that 194 million individuals residing in India
+                    are malnourished and encounter difficulties in obtaining
+                    healthy and nutritious food? By donating, you can make a
+                    positive impact on their lives. Your contribution can assist
+                    us eliminating hunger and ensuring that no one goes to bed
+                    without a meal.
                   </Card.Text>
                 </Card.Body>
               </Card>
             </Col>
 
             <Col lg={4}>
-              <Card className="border-0 shadow-lg rounded-lg" style={{ height: 755 }}>
+              <Card className="border-0 shadow-lg rounded-lg">
                 <div className="p-3 bg-primary text-white">
                   <h3 className="text-center mb-0">Stationary Needs</h3>
                 </div>
@@ -97,31 +105,35 @@ export function MainHome() {
                       marginTop: 20,
                     }}
                   >
-                    <CircularProgressbar value={stationary} strokeWidth={5}>
+                    <CircularProgressbar value={stationary} strokeWidth={8}>
                       <div style={{ fontSize: 12, marginTop: -5 }}>
                         <strong className="text-info">80%</strong> Stationary
                       </div>
                     </CircularProgressbar>
-                    <div style={{ marginTop: 10, fontSize: 16 }}>
+                    <div
+                      style={{
+                        marginTop: 10,
+                        fontSize: 24,
+                        fontWeight: "bold",
+                        color: "blue",
+                      }}
+                    >
                       {stationary}% of stationary needs met
                     </div>
                   </div>
                   <Card.Text className="mt-4">
-                    According to a report by the National Sample Survey Office,
-                    only 65% of Indian households have access to stationery
-                    items. This means that a large number of children and adults
-                    do not have access to basic stationery items such as
-                    notebooks, pens, and pencils. Your donation can help bridge
-                    this gap and provide access to education and learning
-                    opportunities for those in need. Let's come together to
-                    create a brighter future for all.
+                    A large number of children and adults do not have access to
+                    basic stationery items such as notebooks, pens, and pencils.
+                    Your donation can help in providing access to education and
+                    learning opportunities for those in need. Let's come
+                    together to create a brighter future for all.
                   </Card.Text>
                 </Card.Body>
               </Card>
             </Col>
 
             <Col lg={4}>
-              <Card className="border-0 shadow-lg rounded-lg" style={{ height: 755 }}>
+              <Card className="border-0 shadow-lg rounded-lg">
                 <div className="p-3 bg-primary text-white">
                   <h3 className="text-center mb-0">Clothing Needs</h3>
                 </div>
@@ -134,12 +146,19 @@ export function MainHome() {
                       marginTop: 20,
                     }}
                   >
-                    <CircularProgressbar value={clothes} strokeWidth={5}>
+                    <CircularProgressbar value={clothes} strokeWidth={8}>
                       <div style={{ fontSize: 12, marginTop: -5 }}>
                         <strong className="text-info">80%</strong> Clothing
                       </div>
                     </CircularProgressbar>
-                    <div style={{ marginTop: 10, fontSize: 16 }}>
+                    <div
+                      style={{
+                        marginTop: 10,
+                        fontSize: 24,
+                        fontWeight: "bold",
+                        color: "blue",
+                      }}
+                    >
                       {clothes}% of clothing needs met
                     </div>
                   </div>
@@ -147,11 +166,8 @@ export function MainHome() {
                     Did you know that approximately 40% of India's population
                     lives below the poverty line? Many of these individuals lack
                     access to basic necessities like warm clothing. Your
-                    donation to our clothing drive can help provide essential
-                    clothing items to those in need. You can donate money to
-                    purchase new clothing, or even donate gently used clothing
-                    items that you no longer need. Your generosity can make a
-                    real difference in someone's life.
+                    generous donation to support our cause for clothing drive
+                    can help provide essential clothing items to those in need.
                   </Card.Text>
                 </Card.Body>
               </Card>

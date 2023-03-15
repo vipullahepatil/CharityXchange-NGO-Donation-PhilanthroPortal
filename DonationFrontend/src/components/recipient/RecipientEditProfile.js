@@ -83,6 +83,7 @@ export function RecipientEditProfile() {
     if (recipientDetails.recipientName.trim() === "") {
       setReipientNameError("recipient Name is required");
       isValid = false;
+      //vipul1
     } else if (!/^[a-zA-Z\s]+$/.test(recipientDetails.recipientName)) {
       setReipientNameError("recipient name can only contain letters");
       isValid = false;
@@ -90,12 +91,12 @@ export function RecipientEditProfile() {
       setReipientNameError("");
     }
 
-    // recipientPhone validation
-    if (recipientDetails.recipientPhone.trim() === "") {
+     // recipientPhone validation
+     if (recipientDetails.recipientPhone.trim() === "") {
       setReipientPhoneError("recipient Phone number is required");
       isValid = false;
-    } else if (!/^[0-9]+$/.test(recipientDetails.recipientPhone)) {
-      setReipientPhoneError("recipient Phone number can only contain numbers");
+    } else if (!/^[6-9]{1}[0-9]{9}$/.test(recipientDetails.recipientPhone)) {
+      setReipientPhoneError("recipient Phone number can only contain numbers and start with (6-9)");
       isValid = false;
     } else if (recipientDetails.recipientPhone.length !== 10) {
       setReipientPhoneError("recipient Phone number must be 10 digit");
@@ -105,8 +106,8 @@ export function RecipientEditProfile() {
     }
 
     // Recipient ZIP code validation
-    if (!/^\d{6}$/.test(recipientDetails.recipientZipCode.trim())) {
-      setReipientZipCodeError("Please enter a valid 6-digit ZIP code");
+    if (!/^4[0-4]\d{4}$/.test(recipientDetails.recipientZipCode.trim())) {
+      setReipientZipCodeError("Please enter a valid 6-digit ZIP code  and for mh first 2 digit (40-44)");
     } else {
       setReipientZipCodeError("");
     }
