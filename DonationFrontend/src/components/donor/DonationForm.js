@@ -77,6 +77,7 @@ const DonationForm = () => {
         border: "1px solid #ced4da",
         borderRadius: "10px",
         maxWidth: "850px",
+        
       }}
     >
       <Form onSubmit={handleSubmit}>

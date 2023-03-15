@@ -116,7 +116,7 @@ export function RecipientRegistrationForm() {
     if (recipientDetails.recipientPhone.trim() === "") {
       setReipientPhoneError("recipient Phone number is required");
       isValid = false;
-    } else if (!/^[1-9]{1}[0-9]{9}$/.test(recipientDetails.recipientPhone)) {
+    } else if (!/^[6-9]{1}[0-9]{9}$/.test(recipientDetails.recipientPhone)) {
       setReipientPhoneError("recipient Phone number can only contain numbers");
       isValid = false;
     } else if (recipientDetails.recipientPhone.length !== 10) {
@@ -138,10 +138,10 @@ export function RecipientRegistrationForm() {
     } else {
       setReipientEmailError("");
     }
-
+    
     // Recipient ZIP code validation
-    if (!/^\d{6}$/.test(recipientDetails.recipientZipCode.trim())) {
-      setReipientZipCodeError("Please enter a valid 6-digit ZIP code");
+    if (!/^4[0-4]\d{4}$/.test(recipientDetails.recipientZipCode.trim())) {
+      setReipientZipCodeError("Please enter a valid 6-digit ZIP code  and for mh first 2 digit (40-44)");
     } else {
       setReipientZipCodeError("");
     }
